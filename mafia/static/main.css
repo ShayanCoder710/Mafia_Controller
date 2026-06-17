@@ -1,59 +1,71 @@
+:root {
+    --color: rgba(255, 255, 255, 0.47);
+}
+
 @font-face {
     font-family: 'vazir';
     src: url(fonts/Vazirmatn-Medium.ttf);
 }
 
-body{
+body {
     background-image: url(img/والپیپر-فانتزی-طبیعت.jpg);
     height: 100vh;
     background-size: cover;
     margin: 0;
-    animation: identifier 30s linear  infinite ;
+    animation: identifier 30s linear infinite;
     font-family: 'vazir';
 }
 
-*{
+* {
     margin: 0;
 }
 
 @keyframes identifier {
-    0%{
+    0% {
         background-image: url(img/والپیپر-فانتزی-طبیعت.jpg);
     }
-    15%{
+
+    15% {
         background-image: url(img/والپیپر-فانتزی-طبیعت.jpg);
     }
-    25%{
+
+    25% {
         background-image: url(img/والپیپر-4k-مشکی.jpg);
     }
-    40%{
+
+    40% {
         background-image: url(img/والپیپر-4k-مشکی.jpg);
     }
-    50%{
+
+    50% {
         background-image: url(img/والپیپر-نئونی-خفن-4k.jpg);
     }
-    65%{
+
+    65% {
         background-image: url(img/والپیپر-نئونی-خفن-4k.jpg);
     }
-    75%{
+
+    75% {
         background-image: url(img/والپیپر-4k-جوکر-در-آتش.jpg);
     }
-    90%{
-         background-image: url(img/والپیپر-4k-جوکر-در-آتش.jpg);
+
+    90% {
+        background-image: url(img/والپیپر-4k-جوکر-در-آتش.jpg);
     }
-    100%{
+
+    100% {
         background-image: url(img/والپیپر-فانتزی-طبیعت.jpg);
     }
 }
 
-header{
+header {
     width: 95%;
     height: 80px;
     position: fixed;
     top: 2%;
     display: flex;
     gap: 20px;
-    background-color: rgba(255, 255, 255, 0.27);
+    background-color: var(--color);
     border-radius: 20px;
     right: 2.5%;
     backdrop-filter: blur(10px);
@@ -66,7 +78,7 @@ header nav {
     flex-direction: row-reverse;
 }
 
-header nav ul{
+header nav ul {
     display: flex;
     align-items: center;
     gap: 3%;
@@ -75,27 +87,79 @@ header nav ul{
     direction: rtl;
 }
 
-header nav ul li{
+header nav ul li {
     list-style: none;
 }
 
 
-header nav ul li a{
+header nav ul li a {
     font-size: 25px;
     color: rgb(0, 0, 0);
     text-decoration: none;
 }
 
-header nav .logo{
+header nav .logo {
     width: 30%;
     display: flex;
     align-items: center;
     direction: ltr;
     padding-left: 2%;
 }
-.container{
-    width:  100%;
+
+.container {
+    width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+.container .song_player {
+    width: 500px;
+    height: 300px;
+    background-color: var(--color);
+    border-radius: 40px;
+    animation: identifier2 30s linear infinite;
+    border-width: 4px;
+    border-style: solid;
+}
+
+
+
+@keyframes identifier2 {
+    0% {
+        border-color: blue;
+    }
+
+    15% {
+        border-color: blue;
+    }
+
+    25% {
+        border-color: red;
+    }
+
+    40% {
+        border-color: red;
+    }
+
+    50% {
+        border-color: green;
+    }
+
+    65% {
+        border-color: green;
+    }
+
+    75% {
+        border-color: rgb(195, 226, 18);
+    }
+
+    90% {
+        border-color: rgb(195, 226, 18);
+    }
+
+    100% {
+       border-color: blue;
+    }
 }
