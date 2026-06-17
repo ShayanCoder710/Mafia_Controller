@@ -13,12 +13,10 @@ class ListSongView(View):
         else:
             return render(request,'song/index.html',{'songs':[],'song':None})
     def post(self,request):
-        try:
             song = request.POST.get('song')
             find_song = Song.objects.get(name=song)
-            return render(request,'song/index.html',{'songs':Song.objects.all(),'song':find_song[0]})
-        except:
-            raise Http404('song Not found')
+            return render(request,'song/index.html',{'songs':Song.objects.all(),'song':find_song})
+   
 
 class HeaderView(TemplateView):
     template_name = 'partial/header.html'

@@ -4,11 +4,16 @@
 {% block main %}
 <div class="container">
     <form method="post" action="" class="song_player">
+        {% csrf_token %}
         <select name="song" id="select_song">
             {% for i in songs %}
-            <option value="{{ i.song.url }}">{{ i.name }}</option>
+            <option value="{{ i.name }}" {% if i == song %}  selected {% endif %}>{{ i.name }}</option>
             {% endfor %}
         </select>
+        <div class="btns">
+        <button type="button" class="btn play">play</button>
+        <button type="submit" class="btn save">save</button>
+        </div>
         <audio  class="player" src="{{ song.song.url }}"allow="autoplay" ></audio>
     </form>
 </div>
