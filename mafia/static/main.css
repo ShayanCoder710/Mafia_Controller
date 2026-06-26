@@ -112,9 +112,10 @@ header nav .logo {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 5%;
 }
 
-.container .song_player {
+.container .mafia {
     width: 500px;
     height: 300px;
     background-color: var(--color);
