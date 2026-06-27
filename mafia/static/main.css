@@ -206,8 +206,8 @@ header nav .logo {
     cursor: pointer;
 }
 
-.ps {
-    width: 120px !important;
-    height: 50px !important;
-}
 
+
+#num{
+    font-size: 60px;
+}
