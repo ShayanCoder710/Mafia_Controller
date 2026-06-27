@@ -1,7 +1,11 @@
 mafia_controller
 a mafia game controller for playing game
-
-<h1 style="color:red;">this project is not finished!</h1>
+<style>
+  .notice{
+    color:red;
+  }
+</style>
+<h1 class="notice">this project is not finished!</h1>
 
 <h1> how to run this project </h1>
 <br>
