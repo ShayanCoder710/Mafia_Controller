@@ -1,7 +1,7 @@
 let play = document.querySelector('.play');
 let played = false;
 let audio = document.querySelector('.player');
-play.addEventListener('mousedown', async () => {
+play.addEventListener('click', async () => {
     select_song = document.querySelector('#select_song');
     console.log('/succses?id=' + select_song.value);
 
@@ -27,8 +27,12 @@ play.addEventListener('mousedown', async () => {
 
 })
 let start = false;
-let timer = () => {
-    let num_timer = document.querySelector('#num');
+let timer = (num) => {
+    console.log(`#num_${num=='1'?'one':'two'}`);
+    
+    let num_timer = document.getElementById(`num_${num=='1'?'one':'two'}`);
+    console.log(num_timer);
+    
     let btn = document.querySelector('#btn_ps');
     let timer_start = () => {
         num = Number(num_timer.innerHTML);

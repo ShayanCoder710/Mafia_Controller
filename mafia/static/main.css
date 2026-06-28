@@ -208,6 +208,13 @@ header nav .logo {
 
 
 
-#num{
+.num{
     font-size: 60px;
+}
+
+@media screen and (max-width:1087px) {
+body{
+
+    height: 100%;
+}
 }
