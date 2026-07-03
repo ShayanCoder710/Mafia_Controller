@@ -1,6 +1,7 @@
 let play = document.querySelector('.play');
 let played = false;
 let audio = document.querySelector('.player');
+let tik = document.querySelector('.tik')
 play.addEventListener('click', async () => {
     select_song = document.querySelector('#select_song');
     console.log('/succses?id=' + select_song.value);
@@ -53,12 +54,13 @@ let timer = (num, time) => {
 
         if (st.remaining <= 0) {
             console.log(st.interval);
-
             clearInterval(st.intervalId)
             st.intervalId = null;
             st.running = false;
             displayElem.textContent = time;
             btn.textContent = 'start';
+            tik.src = '/static/mp3/tik.mp3';
+            tik.play()
 
         }
 
