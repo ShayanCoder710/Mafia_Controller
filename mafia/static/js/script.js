@@ -27,7 +27,7 @@ play.addEventListener('click', async () => {
 
 })
 let start = false;
-let timer = (num) => {
+let timer = (num,time) => {
     console.log(`#num_${num == '1' ? 'one' : 'two'}`);
 
     let num_timer = document.getElementById(`num_${num == '1' ? 'one' : 'two'}`);
@@ -35,14 +35,20 @@ let timer = (num) => {
 
     let btn = document.querySelector(`#btn_ps_${num == '1' ? 'one' : 'two'}`);
     let timer_start = () => {
-        num = Number(num_timer.innerHTML);
-        if (num <= 0) {
-            location.reload()
+        nummm = Number(num_timer.innerHTML)
+        numm = time;
+        if (nummm <= 0) {
+            console.log(num);
+            
+            num_timer.innerHTML = numm;
+            num_m = 0;
+            clearInterval(intreval)
         }
         else {
-
-            num -= num_m;
-            num_timer.innerHTML = num;
+            console.log(111);
+            
+            nummm -= num_m;
+            num_timer.innerHTML = nummm;
         }
 
     }
@@ -51,7 +57,7 @@ let timer = (num) => {
     if (!start) {
         start = true;
         btn.innerHTML = 'stop';
-        intreval = setInterval(timer_start, 1000);
+        intreval = setInterval(timer_start, 100);
 
     }
     else {
