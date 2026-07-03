@@ -26,47 +26,66 @@ play.addEventListener('click', async () => {
     }
 
 })
-let start = false;
-let timer = (num,time) => {
+let start = {};
+let timer = (num, time) => {
     console.log(`#num_${num == '1' ? 'one' : 'two'}`);
 
-    let num_timer = document.getElementById(`num_${num == '1' ? 'one' : 'two'}`);
-    console.log(num_timer);
+    let displayElem = document.getElementById(`num_${num == '1' ? 'one' : 'two'}`);
+    console.log(displayElem);
+
+    if (!start[num]) {
+        start[num] = {
+            intervalId: null,
+            remaining: time,
+            running: false
+        };
+    }
+
+    let st = start[num];
+    console.log(st);
 
     let btn = document.querySelector(`#btn_ps_${num == '1' ? 'one' : 'two'}`);
     let timer_start = () => {
-        nummm = Number(num_timer.innerHTML)
-        numm = time;
-        if (nummm <= 0) {
-            console.log(num);
-            
-            num_timer.innerHTML = numm;
-            num_m = 0;
-            clearInterval(intreval)
+        st.remaining -= 1;
+
+        displayElem.textContent = st.remaining;
+        console.log(st.remaining);
+
+        if (st.remaining <= 0) {
+            console.log(st.interval);
+
+            clearInterval(st.intervalId)
+            st.intervalId = null;
+            st.running = false;
+            displayElem.textContent = time;
+            btn.textContent = 'start';
+
         }
-        else {
-            console.log(111);
-            
-            nummm -= num_m;
-            num_timer.innerHTML = nummm;
-        }
+
+
 
     }
-    num_m = 1;
-    var intreval;
-    if (!start) {
-        start = true;
-        btn.innerHTML = 'stop';
-        intreval = setInterval(timer_start, 100);
 
+    if (!st.running) {
+        if (st.intervalId) {
+            clearInterval(st.intervalId);
+        }
+
+        st.remaining = Number(displayElem.textContent) || time;
+        st.running = true;
+        btn.textContent = 'stop';
+
+        st.intervalId = setInterval(timer_start, 1000);
     }
     else {
-        clearInterval(intreval);
-        num_timer.innerHTML = 60;
-        btn.innerHTML = 'start';
-        start = false;
-        num_m = 0;
-        location.reload()
+        clearInterval(st.intervalId);
+        st.intervalId = null;
+        st.running = false;
+        btn.textContent = 'start';
+
+        st.remaining = time;
+        displayElem.textContent = time;
     }
+
 
 }
