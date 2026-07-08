@@ -59,7 +59,7 @@ let timer = (num, time) => {
             st.running = false;
             displayElem.textContent = time;
             btn.textContent = 'start';
-            tik.src = '/static/mp3/tik.mp3';
+            tik.src = '/static/mp3/sound.mp3';
             tik.play()
 
         }
