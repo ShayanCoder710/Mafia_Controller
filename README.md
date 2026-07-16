@@ -1,9 +1,14 @@
 mafia_controller
 a mafia game controller for playing game
+
+<h1>now we are working on the Mafia Controller V2</h1>
+
 <h1>Mafia Controller V1</h1>
 <li>timers for the game</li>
 <li>music player</li>
 <li>modern front</li>
+
+<h1>what we will add in Mafia Controller V2</h1>
 
 <h1> how to run this project </h1>
 <br>
