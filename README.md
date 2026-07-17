@@ -1,17 +1,17 @@
-## mafia_controller
+## Mafia Controller
 
 ---
 
 <center><img src="./XD/ChatGPT Image Jul 17, 2026, 11_03_56 AM_compressed.jpg"></center>
 
-# now we are working on the Mafia Controller V2
+# Now we are working on the Mafia Controller V2
 
 # Mafia Controller V1
 - timers for the game
 - music player
 - modern front
 
-# what we will add in Mafia Controller V2
+# What we will add in Mafia Controller V2
 - sign in and login
 - controling the  all of the game
 - evrything will be dynamic
@@ -19,8 +19,8 @@
 
 ---
 
-# how to run this project
-## for windows
+# How to run this project
+## 🪟 For Windows
 ```
 python -m venv venv
 venv/Scripts/activate
@@ -30,7 +30,7 @@ python manage.py runserver
 
 ---
 
-## for linux
+## 🐧 For Gnu/Linux
 ```
 python3 -m venv venv
 source venv/bin/activate
