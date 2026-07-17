@@ -2,7 +2,7 @@
 
 ---
 
-<center><img src="./XD/ChatGPT Image Jul 17, 2026, 11_03_56 AM_compressed.jpg"></center>
+<center><img src="./logo/ChatGPT Image Jul 17, 2026, 11_03_56 AM_compressed.jpg"></center>
 
 # Now we are working on the Mafia Controller V2
 
@@ -37,3 +37,4 @@ source venv/bin/activate
 cd mafia
 python3 manage.py runserver
 ```
+
